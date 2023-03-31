@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "@tanstack/react-router";
 import { Header } from "./layouts";
+import styled from "styled-components";
 import { About, Contact, Design, Home, Location } from "./pages";
 
 const rootRoute = new RootRoute({
@@ -68,3 +69,5 @@ function App() {
 }
 
 export default App;
+
+const main = styled.div``;
