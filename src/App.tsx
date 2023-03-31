@@ -1,13 +1,11 @@
 import {
-  Link,
   Outlet,
   ReactRouter,
   RootRoute,
   Route,
-  Router,
   RouterProvider,
 } from "@tanstack/react-router";
-import { About, Home } from "./pages";
+import { About, Contact, Design, Home, Location } from "./pages";
 
 const rootRoute = new RootRoute({
   component: Root,
@@ -22,9 +20,32 @@ const aboutRoute = new Route({
   path: "/about",
   component: About,
 });
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+const designRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/design/$category",
+  component: Design,
+});
+const locationRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/location",
+  component: Location,
+});
+const contactRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/contact",
+  component: Contact,
+});
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  aboutRoute,
+  designRoute,
+  contactRoute,
+  locationRoute,
+]);
 
-const router = new ReactRouter({ routeTree });
+const router = new ReactRouter({
+  routeTree,
+});
 
 declare module "@tanstack/react-router" {
   interface Register {
