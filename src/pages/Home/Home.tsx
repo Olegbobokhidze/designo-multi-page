@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Banner, Projects } from "../../components";
+import { Banner, Projects, Descriptions } from "../../components";
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <Banner />
       <Wrapper>
         <Projects />
-        <Infos></Infos>
+        <Descriptions />
       </Wrapper>
     </Page>
   );
