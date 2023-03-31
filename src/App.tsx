@@ -57,10 +57,10 @@ declare module "@tanstack/react-router" {
 
 function Root() {
   return (
-    <>
+    <Main>
       <Header />
       <Outlet />
-    </>
+    </Main>
   );
 }
 
@@ -70,4 +70,7 @@ function App() {
 
 export default App;
 
-const main = styled.div``;
+const Main = styled.main`
+  width: 100%;
+  min-height: 100vh;
+`;
