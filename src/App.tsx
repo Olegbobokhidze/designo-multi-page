@@ -5,6 +5,7 @@ import {
   Route,
   RouterProvider,
 } from "@tanstack/react-router";
+import { Header } from "./layouts";
 import { About, Contact, Design, Home, Location } from "./pages";
 
 const rootRoute = new RootRoute({
@@ -56,6 +57,7 @@ declare module "@tanstack/react-router" {
 function Root() {
   return (
     <>
+      <Header />
       <Outlet />
     </>
   );
