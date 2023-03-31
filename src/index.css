@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +9,5 @@
 body {
   width: 100vw;
   min-height: 100vh;
+  font-family: "Jost", sans-serif;
 }
