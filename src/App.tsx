@@ -5,7 +5,7 @@ import {
   Route,
   RouterProvider,
 } from "@tanstack/react-router";
-import { Header } from "./layouts";
+import { Footer, Header } from "./layouts";
 import styled from "styled-components";
 import { About, Contact, Design, Home, Location } from "./pages";
 
@@ -60,6 +60,7 @@ function Root() {
     <Main>
       <Header />
       <Outlet />
+      <Footer />
     </Main>
   );
 }
