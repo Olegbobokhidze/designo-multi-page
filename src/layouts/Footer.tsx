@@ -7,14 +7,16 @@ import Twitter from "../svg/Twitter";
 const Footer = () => {
   return (
     <Main>
-      <FooterCard>
-        <FooterCardTitle>Let’s talk about your project</FooterCardTitle>
-        <FooterCardDescription>
-          Ready to take it to the next level? Contact us today and find out how
-          our expertise can help your business grow.
-        </FooterCardDescription>
-        <Button>Get in touch</Button>
-      </FooterCard>
+      {window.location.pathname !== "/contact" ? (
+        <FooterCard>
+          <FooterCardTitle>Let’s talk about your project</FooterCardTitle>
+          <FooterCardDescription>
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </FooterCardDescription>
+          <Button>Get in touch</Button>
+        </FooterCard>
+      ) : null}
       <Logo src={LogoLight} alt="logo" />
       <Line />
       <MenuList>
