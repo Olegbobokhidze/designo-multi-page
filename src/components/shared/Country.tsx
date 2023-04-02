@@ -27,6 +27,7 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 `;
 const Img = styled.img`
   width: 100%;
@@ -37,7 +38,6 @@ const CountryTitle = styled.h2`
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 1.4px;
-  color: var(--light);
   text-transform: uppercase;
 `;
 
@@ -46,4 +46,10 @@ const Button = styled.button`
   border-radius: 8px;
   width: 152px;
   height: 56px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `;

@@ -1,6 +1,11 @@
 import React from "react";
+import { Countries } from "../../components";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <Countries />
+    </>
+  );
 };
 export default About;
