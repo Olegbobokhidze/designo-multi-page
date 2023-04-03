@@ -31,6 +31,9 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    border-radius: 15px;
+  }
 `;
 
 const BannerTitle = styled.h1`

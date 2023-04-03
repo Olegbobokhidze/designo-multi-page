@@ -16,11 +16,17 @@ const Home = () => {
 export default Home;
 const Page = styled.main`
   width: 100%;
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
 `;
 
 const Wrapper = styled.div`
   width: 100%;
   padding: 0 24px;
+  @media screen and (min-width: 768px) {
+    padding: 0px;
+  }
 `;
 
 const Infos = styled.section`

@@ -10,8 +10,10 @@ const Description = ({ title, image, paragraph }: PropsType) => {
   return (
     <Main>
       <Img src={image} alt="img" />
-      <Title>{title}</Title>
-      <Paragraph>{paragraph}</Paragraph>
+      <div>
+        <Title>{title}</Title>
+        <Paragraph>{paragraph}</Paragraph>
+      </div>
     </Main>
   );
 };
@@ -26,10 +28,18 @@ const Main = styled.div`
   text-align: center;
   align-items: center;
   gap: 10px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+  }
 `;
 const Img = styled.img`
   width: 200px;
   height: 250px;
+  @media screen and (min-width: 768px) {
+    width: 250px;
+  }
 `;
 const Title = styled.h3`
   font-weight: 500;
