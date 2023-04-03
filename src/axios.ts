@@ -1,4 +1,5 @@
 import axios from "axios";
+import { InfoSchemaType } from "./types";
 
 const instance = axios.create({
   baseURL: "https://designo.onrender.com/api",
@@ -10,4 +11,7 @@ const instance = axios.create({
 
 export const getCategoryProjects = async (category: string) => {
   return instance.get("/projects/" + category);
+};
+export const postInvoices = async (data: InfoSchemaType) => {
+  return instance.post("/invoices", data);
 };
