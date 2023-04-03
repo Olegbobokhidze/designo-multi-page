@@ -1,8 +1,13 @@
 import React from "react";
-import { Countries } from "../../components";
+import { ContactForm, Countries } from "../../components";
 
 const Contact = () => {
-  return <Countries />;
+  return (
+    <>
+      <ContactForm />
+      <Countries />
+    </>
+  );
 };
 
 export default Contact;
