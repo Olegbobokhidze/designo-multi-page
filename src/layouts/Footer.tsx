@@ -20,6 +20,7 @@ const Footer = () => {
       <Logo src={LogoLight} alt="logo" />
       <Line />
       <MenuList>
+        <LogoTablet src={LogoLight} alt="logotablet" />
         <Link
           to="/about"
           style={{ textDecoration: "none", width: "fit-content" }}
@@ -39,6 +40,7 @@ const Footer = () => {
           <ListItem>contact</ListItem>
         </Link>
       </MenuList>
+      <LineTablet />
       <Address>
         <span style={{ fontWeight: 700 }}>Designo Central Office</span> 3886
         Wellington Street Toronto, Ontario M9C 3J5
@@ -114,19 +116,48 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   margin-top: 24px;
+  transition: 0.5s all;
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
 `;
 
 const Logo = styled.img`
   width: 202px;
   margin-top: 64px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
-
+const LogoTablet = styled.img`
+  width: 202px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
+const LineTablet = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.1;
+  margin-top: 32px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
 const Line = styled.div`
   width: 100%;
   height: 1px;
   background-color: white;
   opacity: 0.1;
   margin-top: 32px;
+  display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const MenuList = styled.ul`
@@ -136,6 +167,12 @@ const MenuList = styled.ul`
   align-items: center;
   row-gap: 32px;
   margin-top: 32px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+  }
 `;
 
 const ListItem = styled.h3`
@@ -146,6 +183,10 @@ const ListItem = styled.h3`
   color: white;
   text-transform: uppercase;
   width: fit-content;
+
+  &:hover {
+    color: #e7816b;
+  }
 `;
 
 const Address = styled.h3`
