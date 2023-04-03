@@ -9,6 +9,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     control,
+    reset,
     watch,
   } = useForm<InfoSchemaType>({
     resolver: zodResolver(InvoiceType),
@@ -16,6 +17,7 @@ const ContactForm = () => {
   });
   const onSubmit = (data: InfoSchemaType) => {
     console.log(data);
+    reset();
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -33,7 +35,7 @@ const ContactForm = () => {
         <Input placeholder="Email Address" {...register("email")} />
         <Input placeholder="Phone" {...register("phone")} />
         <TextArea placeholder="Your Message" {...register("message")} />
-        <button>bbb</button>
+        <Button type="submit">submit</Button>
       </Wrapper>
     </form>
   );
@@ -98,6 +100,22 @@ const TextArea = styled.textarea`
     outline: none;
   }
   &::placeholder {
+    color: white;
+  }
+`;
+const Button = styled.button`
+  background-color: white;
+  width: 152px;
+  height: 56px;
+  color: black;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: 0.5s all;
+  &:hover {
+    background-color: gray;
     color: white;
   }
 `;
