@@ -16,7 +16,6 @@ const ContactForm = () => {
     mode: "onChange",
   });
   const onSubmit = (data: InfoSchemaType) => {
-    console.log(data);
     reset();
   };
   return (

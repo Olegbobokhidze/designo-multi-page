@@ -20,7 +20,6 @@ const Design = () => {
       try {
         const response = await getCategoryProjects(category || "");
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
