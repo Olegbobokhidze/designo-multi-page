@@ -72,6 +72,9 @@ const Main = styled.footer`
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
+  @media screen and (min-width: 1440px) {
+    padding: 0px 120px;
+  }
 `;
 
 const FooterCard = styled.div`
