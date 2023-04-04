@@ -61,6 +61,11 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: #e7816b;
   margin-bottom: 70px;
+  @media screen and (min-width: 1440px) {
+    padding: 150px;
+    margin-top: 80px;
+    border-radius: 0px 200px 0px 200px;
+  }
 `;
 const Title = styled.h1`
   color: white;
