@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   background-color: #e7816b;
   margin-bottom: 70px;
   @media screen and (min-width: 1440px) {
-    padding: 150px;
+    padding: 100px;
     margin-top: 80px;
     border-radius: 0px 200px 0px 200px;
   }
@@ -71,12 +71,18 @@ const Title = styled.h1`
   color: white;
   font-size: 32px;
   font-weight: 500;
+  @media screen and (min-width: 1440px) {
+    font-size: 44px;
+  }
 `;
 const Description = styled.p`
   font-size: 15px;
   line-height: 25px;
   font-weight: 400;
   color: white;
+  @media screen and (min-width: 1440px) {
+    font-size: 20px;
+  }
 `;
 const Input = styled.input`
   width: 100%;
@@ -92,20 +98,33 @@ const Input = styled.input`
   &::placeholder {
     color: white;
   }
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
 `;
 const TextArea = styled.textarea`
-  width: 100%;
   min-height: 100px;
   border: none;
   border-bottom: 1px solid whitesmoke;
   background-color: #e7816b;
   color: whitesmoke;
   padding: 10px;
+  resize: none;
+  width: 100%;
   &:focus {
     outline: none;
   }
   &::placeholder {
     color: white;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+    &::placeholder {
+      font-size: 16px;
+    }
   }
 `;
 const Button = styled.button`
