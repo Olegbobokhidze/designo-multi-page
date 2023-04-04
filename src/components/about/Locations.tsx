@@ -37,4 +37,15 @@ export default Locations;
 
 const Wrapper = styled.div`
   width: 100%;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 50px;
+    padding: 10px 40px 10px 40px;
+    margin-top: 50px;
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: auto auto auto;
+    padding: 10px 120px 10px 120px;
+  }
 `;

@@ -30,10 +30,16 @@ const Wrapper = styled.div`
   text-align: center;
   background-color: #fdf3f0;
   margin-bottom: 40px;
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px;
+  }
 `;
 const Img = styled.img`
   width: 100%;
-  height: 300px;
+  min-height: 300px;
+  @media screen and (min-width: 1440px) {
+    border-radius: 25px 25px 0px 0px;
+  }
 `;
 const Title = styled.h2`
   color: #e7816b;
