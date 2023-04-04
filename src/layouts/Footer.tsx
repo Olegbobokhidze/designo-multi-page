@@ -15,6 +15,13 @@ const Footer = () => {
             how our expertise can help your business grow.
           </FooterCardDescription>
           <Button>Get in touch</Button>
+          <Circle></Circle>
+          <Circle1></Circle1>
+          <Circle2></Circle2>
+          <Circle3></Circle3>
+          <Circle4></Circle4>
+          <Circle5></Circle5>
+          <Circle6></Circle6>
         </FooterCard>
       ) : null}
       <Logo src={LogoLight} alt="logo" />
@@ -106,6 +113,8 @@ const FooterCard = styled.div`
   background-color: #e7816b;
   border-radius: 15px;
   margin-top: -190px;
+  position: relative;
+  overflow: hidden;
 `;
 
 const FooterCardTitle = styled.h2`
@@ -114,6 +123,7 @@ const FooterCardTitle = styled.h2`
   line-height: 36px;
   color: white;
   text-align: center;
+  z-index: 10;
 `;
 
 const FooterCardDescription = styled.h3`
@@ -122,6 +132,7 @@ const FooterCardDescription = styled.h3`
   line-height: 25px;
   color: white;
   text-align: center;
+  z-index: 10;
 `;
 
 const Button = styled.button`
@@ -140,6 +151,7 @@ const Button = styled.button`
   cursor: pointer;
   margin-top: 24px;
   transition: 0.5s all;
+  z-index: 10;
   &:hover {
     background-color: grey;
     color: white;
@@ -248,4 +260,114 @@ const Mobile = styled.div`
     display: none;
     flex-direction: row;
   }
+`;
+
+const Circle = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  left: 0;
+  top: 102px;
+`;
+const Circle1 = styled.div`
+  position: absolute;
+  width: 220px;
+  height: 330px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  left: 300px;
+  top: -110px;
+`;
+const Circle2 = styled.div`
+  position: absolute;
+  width: 400px;
+  height: 440px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  left: 500px;
+  top: -100px;
+`;
+
+const Circle3 = styled.div`
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  right: 0;
+  top: 102px;
+`;
+
+const Circle4 = styled.div`
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  right: 0;
+  top: -102px;
+`;
+
+const Circle5 = styled.div`
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  left: 0;
+  top: -102px;
+`;
+
+const Circle6 = styled.div`
+  position: absolute;
+  width: 800px;
+  height: 900px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  right: 0;
+  top: -102px;
 `;

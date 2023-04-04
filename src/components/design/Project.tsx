@@ -25,6 +25,7 @@ const Poster = styled.img`
   }
   @media screen and (min-width: 1440px) {
     width: 100%;
+    border-radius: 25px 25px 0px 0px;
   }
 `;
 const Li = styled.li`
@@ -36,6 +37,7 @@ const Li = styled.li`
   }
   @media screen and (min-width: 1440px) {
     display: block;
+    border-radius: 25px;
   }
 `;
 const H2 = styled.h2`
