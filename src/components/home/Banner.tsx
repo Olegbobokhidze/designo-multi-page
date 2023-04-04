@@ -34,6 +34,7 @@ const Main = styled.div`
   overflow: hidden;
   @media screen and (min-width: 768px) {
     border-radius: 15px;
+    height: 800px;
   }
 `;
 
@@ -43,9 +44,11 @@ const BannerTitle = styled.h1`
   line-height: 36px;
   color: whitesmoke;
   text-align: center;
-  @media screen and (min-width: 1440px) {
-    width: 430px;
-    margin-bottom: 30px;
+  z-index: 1;
+  width: 430px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
   }
 `;
 
@@ -55,8 +58,11 @@ const BannerDescription = styled.h2`
   line-height: 25px;
   color: whitesmoke;
   text-align: center;
-  @media screen and (min-width: 1440px) {
-    width: 360px;
+  width: 430px;
+  margin-bottom: 30px;
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -75,6 +81,12 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   margin-top: 24px;
+  z-index: 99;
+  transition: 0.5s all;
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
 `;
 
 const Circle = styled.div`

@@ -19,6 +19,9 @@ const Page = styled.main`
   @media screen and (min-width: 768px) {
     padding: 40px;
   }
+  @media screen and (min-width: 1440px) {
+    padding: 40px 120px 40px 120px;
+  }
 `;
 
 const Wrapper = styled.div`
