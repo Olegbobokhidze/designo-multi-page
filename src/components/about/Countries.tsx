@@ -29,5 +29,6 @@ const CountryList = styled.div`
     justify-content: space-around;
     margin-top: 150px;
     margin-bottom: 150px;
+    padding: 120px;
   }
 `;

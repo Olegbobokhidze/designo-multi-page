@@ -44,6 +44,6 @@ const Desktop = styled.div`
   width: 100%;
   @media screen and (min-width: 768px) {
     display: flex;
-    padding: 40px;
+    padding: 120px;
   }
 `;

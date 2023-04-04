@@ -65,4 +65,7 @@ const Desktop = styled.div`
     gap: 50px;
     padding: 40px;
   }
+  @media screen and (min-width: 1440px) {
+    padding: 120px;
+  }
 `;
