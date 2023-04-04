@@ -26,5 +26,8 @@ const List = styled.ul`
   grid-template-columns: auto;
   @media screen and (min-width: 1440px) {
     grid-template-columns: auto auto auto;
+    column-gap: 40px;
+    padding: 0px;
+    margin: 40px 0px;
   }
 `;

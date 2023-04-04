@@ -7,7 +7,7 @@ import {
   WebDesignMobile,
 } from "../../assets";
 import { getCategoryProjects } from "../../axios";
-import { Project } from "../../components";
+import { Info, Project } from "../../components";
 import { DesignProjects } from "../../components/design";
 import { ProjectType } from "../../types";
 
@@ -32,31 +32,44 @@ const Design = () => {
       title: "WEB DESIGN",
       image: WebDesignMobile,
       to: "web",
+      description:
+        "We build websites that serve as powerful marketing tools and bring memorable brand experiences",
     },
     {
       title: "APP DESIGN",
       image: AppDesignMobile,
       to: "app",
+      description:
+        "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
     },
     {
       title: "GRAPHIC DESIGN",
       image: GraphicDesignMobile,
       to: "graphic",
+      description:
+        "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
     },
   ]);
   return (
     <Main>
-      {data.length > 0 ? <DesignProjects projects={data} /> : null}
       {arrOfProjects
-        .filter((el) => el.to !== category)
+        .filter((el) => el.to === category)
         .map((el) => (
-          <Project
-            to={"/" + el.to}
-            image={el.image}
-            title={el.title}
-            key={el.title}
-          />
+          <Info title={el.title} key={el.title} description={el.description} />
         ))}
+      {data.length > 0 ? <DesignProjects projects={data} /> : null}
+      <Items>
+        {arrOfProjects
+          .filter((el) => el.to !== category)
+          .map((el) => (
+            <Project
+              to={"/" + el.to}
+              image={el.image}
+              title={el.title}
+              key={el.title}
+            />
+          ))}
+      </Items>
     </Main>
   );
 };
@@ -69,5 +82,18 @@ const Main = styled.section`
   grid-template-columns: auto;
   row-gap: 24px;
   padding: 20px;
-  margin-top: 120px;
+  margin-top: 60px;
+  @media screen and (min-width: 1440px) {
+    padding: 120px;
+  }
+`;
+
+const Items = styled.div`
+  display: grid;
+  grid-template-columns: auto;
+  gap: 40px;
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 `;

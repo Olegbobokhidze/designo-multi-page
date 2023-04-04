@@ -41,22 +41,42 @@ const Footer = () => {
         </Link>
       </MenuList>
       <LineTablet />
-      <Address>
-        <span style={{ fontWeight: 700 }}>Designo Central Office</span> 3886
-        Wellington Street Toronto, Ontario M9C 3J5
-      </Address>
-      <Address>
-        <span style={{ fontWeight: 700 }}>Contact Us (Central Office)</span> P :
-        +1 253-863-8967
-        <br />M : contact@designo.co
-      </Address>
-      <SocialIcons>
-        <Facebook />
-        <Youtube />
-        <Pinterest />
-        <Twitter />
-        <Instagram />
-      </SocialIcons>
+      <Mobile>
+        <Address>
+          <span style={{ fontWeight: 700 }}>Designo Central Office</span> 3886
+          Wellington Street Toronto, Ontario M9C 3J5
+        </Address>
+        <Address>
+          <span style={{ fontWeight: 700 }}>Contact Us (Central Office)</span> P
+          : +1 253-863-8967
+          <br />M : contact@designo.co
+        </Address>
+        <SocialIcons>
+          <Facebook />
+          <Youtube />
+          <Pinterest />
+          <Twitter />
+          <Instagram />
+        </SocialIcons>
+      </Mobile>
+      <Desktop>
+        <Address>
+          <span style={{ fontWeight: 700 }}>Designo Central Office</span> 3886
+          Wellington Street Toronto, Ontario M9C 3J5
+        </Address>
+        <Address>
+          <span style={{ fontWeight: 700 }}>Contact Us (Central Office)</span> P
+          : +1 253-863-8967
+          <br />M : contact@designo.co
+        </Address>
+        <SocialIcons>
+          <Facebook />
+          <Youtube />
+          <Pinterest />
+          <Twitter />
+          <Instagram />
+        </SocialIcons>
+      </Desktop>
     </Main>
   );
 };
@@ -176,6 +196,9 @@ const MenuList = styled.ul`
     gap: 40px;
     text-align: center;
   }
+  @media screen and (min-width: 1440px) {
+    gap: 120px;
+  }
 `;
 
 const ListItem = styled.h3`
@@ -209,4 +232,20 @@ const SocialIcons = styled.ul`
   align-items: center;
   column-gap: 16px;
   margin-top: 40px;
+`;
+const Desktop = styled.div`
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    gap: 150px;
+  }
+`;
+const Mobile = styled.div`
+  display: block;
+  @media screen and (min-width: 1440px) {
+    display: none;
+    flex-direction: row;
+  }
 `;
