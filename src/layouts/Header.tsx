@@ -96,6 +96,10 @@ const HeaderTablet = styled.header`
   align-items: center;
   @media screen and (min-width: 768px) {
     display: flex;
+    padding: 10px 40px 0px 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 20px 120px 0px 120px;
   }
 `;
 const HeaderComponent = styled.header`
@@ -112,6 +116,9 @@ const HeaderComponent = styled.header`
 `;
 const Logo = styled.img`
   width: 202px;
+  @media screen and (min-width: 1440px) {
+    width: 250px;
+  }
 `;
 const Backdrop = styled.div`
   width: 100vw;
@@ -155,5 +162,8 @@ const NavItem = styled.h3`
     color: black;
     font-size: 16px;
     letter-spacing: 1px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 14px;
   }
 `;
