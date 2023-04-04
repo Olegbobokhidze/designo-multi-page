@@ -6,11 +6,13 @@ type PropsType = {
   title: string;
   image: string;
   to: string;
+  height?: string;
 };
 
 const Project: React.FC<PropsType> = ({ title, image, to }) => {
+  console.log(window.location.pathname);
   return (
-    <Main image={image} title={title}>
+    <Main image={image} title={title} window={window.location.pathname}>
       <Link
         to="/design/$category"
         params={{ category: to }}
@@ -28,9 +30,8 @@ const Project: React.FC<PropsType> = ({ title, image, to }) => {
 };
 
 export default Project;
-
 const Main = styled.div(
-  (props: { image: string; title: string }) => css`
+  (props: { image: string; title: string; window: any }) => css`
     width: 100%;
     height: 250px;
     display: flex;
@@ -47,7 +48,9 @@ const Main = styled.div(
       display: flex;
     }
     @media screen and (min-width: 1440px) {
-      height: ${props.title === "WEB DESIGN" ? "640px" : "300px"};
+      height: ${props.title === "WEB DESIGN" && props.window === "/"
+        ? "640px"
+        : "300px"};
     }
   `
 );
