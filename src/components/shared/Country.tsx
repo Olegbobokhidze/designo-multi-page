@@ -28,10 +28,16 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @media screen and (min-width: 1440px) {
+    gap: 30px;
+  }
 `;
 const Img = styled.img`
   width: 100%;
   height: 200px;
+  @media screen and (min-width: 1440px) {
+    height: 250px;
+  }
 `;
 const CountryTitle = styled.h2`
   font-weight: 500;
@@ -49,7 +55,11 @@ const Button = styled.button`
   color: white;
   border: none;
   cursor: pointer;
+  transition: 0.7s all;
   &:hover {
-    opacity: 0.8;
+    background-color: gray;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
   }
 `;

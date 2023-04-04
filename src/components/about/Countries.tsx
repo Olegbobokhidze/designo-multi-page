@@ -24,4 +24,10 @@ const CountryList = styled.div`
   margin-top: 20px;
   column-gap: 100px;
   grid-template-columns: auto;
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
 `;
