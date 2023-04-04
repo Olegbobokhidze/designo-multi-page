@@ -11,12 +11,12 @@ type PropsType = {
 const Project: React.FC<PropsType> = ({ title, image, to }) => {
   return (
     <Main image={image} title={title}>
-      <ProjectTitle>{title}</ProjectTitle>
       <Link
         to="/design/$category"
         params={{ category: to }}
         style={{ textDecoration: "none", zIndex: "10" }}
       >
+        <ProjectTitle>{title}</ProjectTitle>
         <ViewProject>
           <ViewProjectText>VIEW PROJECTS</ViewProjectText>
           <RightArrow />
@@ -57,7 +57,7 @@ const ProjectTitle = styled.h2`
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 1.4px;
-  color: var(--light);
+  color: white;
   text-transform: uppercase;
   z-index: 1;
 `;
@@ -75,7 +75,7 @@ const ViewProjectText = styled.h3`
   line-height: 21.68px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--light);
+  color: white;
 `;
 const Background = styled.div`
   display: none;

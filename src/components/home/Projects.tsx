@@ -3,6 +3,9 @@ import {
   GraphicDesignMobile,
   AppDesignMobile,
   WebDesignMobile,
+  DesktopWebDesign,
+  DesktopAppDesign,
+  DesktopGraphicDesign,
 } from "../../assets";
 import Project from "../shared/Project";
 
@@ -21,13 +24,13 @@ const Projects = () => {
         />
       </Main>
       <Desktop>
-        <Project title="WEB DESIGN" image={WebDesignMobile} to="/web" />
+        <Project title="WEB DESIGN" image={DesktopWebDesign} to="/web" />
         <DesktopHolder>
-          <Project title="APP DESIGN" image={AppDesignMobile} to="/app" />
+          <Project title="APP DESIGN" image={DesktopAppDesign} to="/app" />
 
           <Project
             title="GRAPHIC DESIGN"
-            image={GraphicDesignMobile}
+            image={DesktopGraphicDesign}
             to="/graphic"
           />
         </DesktopHolder>
