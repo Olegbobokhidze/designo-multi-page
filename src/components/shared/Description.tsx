@@ -33,6 +33,11 @@ const Main = styled.div`
     text-align: left;
     justify-content: space-around;
   }
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 `;
 const Img = styled.img`
   width: 200px;

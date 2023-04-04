@@ -15,6 +15,7 @@ const Banner = () => {
       <Button>Learn More</Button>
       <Circle />
       <Mobile src={Phone} />
+      <CircleDesk />
     </Main>
   );
 };
@@ -42,6 +43,10 @@ const BannerTitle = styled.h1`
   line-height: 36px;
   color: whitesmoke;
   text-align: center;
+  @media screen and (min-width: 1440px) {
+    width: 430px;
+    margin-bottom: 30px;
+  }
 `;
 
 const BannerDescription = styled.h2`
@@ -50,6 +55,9 @@ const BannerDescription = styled.h2`
   line-height: 25px;
   color: whitesmoke;
   text-align: center;
+  @media screen and (min-width: 1440px) {
+    width: 360px;
+  }
 `;
 
 const Button = styled.button`
@@ -83,6 +91,31 @@ const Circle = styled.div`
   transform: matrix(0, -1, -1, 0, 0, 0);
   left: 0;
   top: 102px;
+  @media screen and (min-width: 1440px) {
+    left: -300px;
+    width: 1200px;
+    height: 1200px;
+    top: -400px;
+  }
+`;
+const CircleDesk = styled.div`
+  position: absolute;
+  width: 1500px;
+  height: 1500px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 2, 2, 0.0001) 0%,
+    rgba(93, 2, 2, 0.497569) 100%
+  );
+  opacity: 0.31;
+  transform: matrix(0, -1, -1, 0, 0, 0);
+  right: -300px;
+  display: none;
+  top: 400px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
 `;
 
 const Mobile = styled.img`

@@ -50,7 +50,12 @@ const Design = () => {
       {arrOfProjects
         .filter((el) => el.to !== category)
         .map((el) => (
-          <Project to={"/" + el.to} image={el.image} title={el.title} />
+          <Project
+            to={"/" + el.to}
+            image={el.image}
+            title={el.title}
+            key={el.title}
+          />
         ))}
     </Main>
   );

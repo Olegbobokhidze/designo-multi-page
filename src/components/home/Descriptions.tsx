@@ -25,4 +25,7 @@ const Main = styled.section`
   grid-template-columns: auto;
   row-gap: 130px;
   margin-top: 120px;
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: auto auto auto;
+  }
 `;
